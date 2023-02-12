@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<body>
+
+    <!--project-->
+    <div class="project-item">
+
+        <!-- project title -->
+        <h2 class="project-title">Titanic Project</h2>
+
+        <!-- project description -->
+        <p>In this project, I was keen on developing a simple supervised machine learning model to predict which passengers survived the titanic disaster. In particular, I wanted to build the following skills:
+            <ul>
+                <li>Data analysis including conducting statistical tests.</li>
+                <li>Training, evaluating and improving binary classifiers.</li>
+                <li>Modularising the model into a pipeline using PostgreSQL and Docker.</li>
+            </ul>
+        </p>
+
+        <!-- project thumbnail -->
+        <img class = "project-image" src="{{ url_for('send_static', path='images/titanic.jpg') }}" alt="Project Thumbnail">
+
+        <!-- project link -->
+        <a class="project-link" href="https://github.com/amateurish-coder/titanic_project.git">View Project Details</a>
+    </div>
+</body>
+</html>
+
+{% endblock content %}

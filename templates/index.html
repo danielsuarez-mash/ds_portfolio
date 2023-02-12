@@ -1,9 +1,6 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    <head>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    </head>
 
 <!--    <h1> Home Page </h1>-->
     <body>
@@ -12,25 +9,22 @@
       <h2>Home Page</h2>
     </div>
 
-    <div class="container">
-        <div class="row">
-          <div class="column" style="background-color:#aaa;">
-            <h2>
-                Titanic Project
-            </h2>
+    <!--bio-->
+    <div class="bio-container">
+        <a class="linkedin-link" href="https://www.linkedin.com/in/daniel-suarez-mash-05356511b/">
+            <img class="bio-picture" src="{{ url_for('send_static', path='images/selfie.jpeg') }}" alt="Profile Picture of me">
+        </a>
+        <div class="bio-textbox">
+            <p class="bio-text">
+                Hi there. I'm Daniel and that's my dog Ernie.
 
-              <p>
-                  Here is the link to my titanic project code:
-              </p>
-
-          </div>
-          <div class="column" style="background-color:#bbb;">Column</div>
-          <div class="column" style="background-color:#ccc;">Column</div>
+                I built this website (with the help of ChatGPT) to build my web-development skills and thought it would serve as a good place to various passion projects. Here, you can find my DS projects, CV and blog (which probably won't be updated regularly). I'll do my best to keep it up to date!
+            </p>
         </div>
     </div>
 
     <div class="footer">
-      <p>Footer</p>
+
     </div>
 
     </body>
