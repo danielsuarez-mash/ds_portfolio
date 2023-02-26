@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<body>
+  <header>
+    <h1>{{ project.title }}</h1>
+  </header>
+  <main>
+    <h2>Introduction</h2>
+    <p>The main objective for this project was to create an ML classifier which could predict which passengers survived titanic disaster. Below are the steps I took to do this:</p>
+    <h2>Project Plan</h2>
+    <ol>
+      <li>Data engineering: downloading the data from Kaggle and importing into it a local PostgreSQL database.</li>
+      <li>Data pre-processing: loading the data into a Jupyter environment and inspecting it for missing data.</li>
+      <li>Data analysis: using statistical inference to find out what columns have a relationship with survival.</li>
+    </ol>
+    <h2>Data</h2>
+    <table border="1" class="dataframe">  <thead>    <tr style="text-align: right;">      <th></th>      <th>passengerid</th>      <th>survived</th>      <th>pclass</th>      <th>name</th>      <th>sex</th>      <th>age</th>      <th>sibsp</th>      <th>parch</th>      <th>ticket</th>      <th>fare</th>      <th>cabin</th>      <th>embarked</th>      <th>title</th>      <th>title_group</th>    </tr>  </thead>  <tbody>    <tr>      <th>0</th>      <td>1</td>      <td>0</td>      <td>3</td>      <td>Braund, Mr. Owen Harris</td>      <td>male</td>      <td>22.0</td>      <td>1.0</td>      <td>0.0</td>      <td>A/5 21171</td>      <td>7.2500</td>      <td>None</td>      <td>S</td>      <td>Mr</td>      <td>Mr</td>    </tr>    <tr>      <th>1</th>      <td>2</td>      <td>1</td>      <td>1</td>      <td>Cumings, Mrs. John Bradley (Florence Briggs Thayer)</td>      <td>female</td>      <td>38.0</td>      <td>1.0</td>      <td>0.0</td>      <td>PC 17599</td>      <td>71.2833</td>      <td>C85</td>      <td>C</td>      <td>Mrs</td>      <td>Married female</td>    </tr>    <tr>      <th>2</th>      <td>3</td>      <td>1</td>      <td>3</td>      <td>Heikkinen, Miss. Laina</td>      <td>female</td>      <td>26.0</td>      <td>0.0</td>      <td>0.0</td>      <td>STON/O2. 3101282</td>      <td>7.9250</td>      <td>None</td>      <td>S</td>      <td>Miss</td>      <td>Unmarried female</td>    </tr>    <tr>      <th>3</th>      <td>4</td>      <td>1</td>      <td>1</td>      <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>      <td>female</td>      <td>35.0</td>      <td>1.0</td>      <td>0.0</td>      <td>113803</td>      <td>53.1000</td>      <td>C123</td>      <td>S</td>      <td>Mrs</td>      <td>Married female</td>    </tr>    <tr>      <th>4</th>      <td>5</td>      <td>0</td>      <td>3</td>      <td>Allen, Mr. William Henry</td>      <td>male</td>      <td>35.0</td>      <td>0.0</td>      <td>0.0</td>      <td>373450</td>      <td>8.0500</td>      <td>None</td>      <td>S</td>      <td>Mr</td>      <td>Mr</td>    </tr>  </tbody></table>
+    <h2>Findings</h2>
+    <p>{{ project.findings }}</p>
+  </main>
+  <footer>
+    <p>&copy; {{ project.year }} {{ project.author }}</p>
+  </footer>
+</body>
+
+{% endblock content %}

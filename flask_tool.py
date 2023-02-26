@@ -1,4 +1,5 @@
 from flask import Flask, render_template, redirect, url_for, send_from_directory
+from projects import project_dict
 
 app = Flask(__name__)
 
@@ -27,6 +28,11 @@ def about_me():
 @app.route("/ds-projects")
 def ds_projects():
     return render_template('ds-projects.html', people=people, ghub=ghub)
+
+
+@app.route("/titanic")
+def titanic():
+    return render_template('titanic.html', people=people, ghub=ghub, project=project_dict['Titanic'])
 
 
 # Whatever I type after /home/{....} will be captured by the python function as an input

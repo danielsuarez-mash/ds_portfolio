@@ -5,26 +5,35 @@
 <!--    <h1> Home Page </h1>-->
     <body>
 
-    <div class="header">
-      <h2>Home Page</h2>
-    </div>
+
 
     <!--bio-->
-    <div class="bio-container">
-        <a class="linkedin-link" href="https://www.linkedin.com/in/daniel-suarez-mash-05356511b/">
-            <img class="bio-picture" src="{{ url_for('send_static', path='images/selfie.jpeg') }}" alt="Profile Picture of me">
-        </a>
-        <div class="bio-textbox">
-            <p class="bio-text">
-                Hi there. I'm Daniel and that's my dog Ernie.
-
-                I built this website (with the help of ChatGPT) to build my web-development skills and thought it would serve as a good place to various passion projects. Here, you can find my DS projects, CV and blog (which probably won't be updated regularly). I'll do my best to keep it up to date!
-            </p>
+    <div class="card">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <a class="linkedin-link" href="https://www.linkedin.com/in/daniel-suarez-mash-05356511b/">
+                    <img class="img-fluid rounded-start" src="{{ url_for('send_static', path='images/selfie.jpeg') }}" alt="Profile Picture of me">
+                </a>
+            </div>
+            <div class="col-md-8 d-flex">
+                <div class="card-body d-flex flex-column justify-content-center align-items-center m-5">
+                    <h3 class="card-title">
+                        Welcome
+                    </h3>
+                    <p class="card-text text-center mt-3 align-items-center">
+                        Hi there.
+                        <br>
+                        <br>
+                        I'm Daniel and that's my dog Ernie.
+                        <br>
+                        <br>
+                        I built this website (with the help of ChatGPT) to build my web-development skills
+                        and thought it would serve as a good place to various passion projects.
+                        Here, you can find my DS projects, CV and blog.
+                    </p>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <div class="footer">
-
     </div>
 
     </body>
