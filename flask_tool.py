@@ -10,7 +10,7 @@ people = {
 }
 
 ghub = "https://github.com/amateurish-coder"
-
+ghub_titanic = "https://github.com/amateurish-coder/titanic_project/tree/development"
 
 # Making a home page
 @app.route("/")
@@ -24,12 +24,12 @@ def about_me():
     return render_template('about-me.html', people=people, ghub=ghub)
 
 
-# About page
+# Projects page
 @app.route("/ds-projects")
 def ds_projects():
-    return render_template('ds-projects.html', people=people, ghub=ghub)
+    return render_template('ds-projects.html', people=people, ghub=ghub, ghub_titanic=ghub_titanic)
 
-
+# Titanic project
 @app.route("/titanic")
 def titanic():
     return render_template('titanic.html', people=people, ghub=ghub, project=project_dict['Titanic'])
